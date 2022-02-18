@@ -28,3 +28,72 @@
       secondes;
     
 console.log(fullDate);
+
+// 
+
+
+// const mois = String(window.prompt("Veuillez saisir un mois de l'année:"));
+// if (mois == "janvier" || mois== "mars" || mois=="mai" || mois=="juillet" ||mois=="septembre")
+
+
+const mois1 =Number(window.prompt("Veuillez saisir un mois de l'année en chiffre 0=janvier 11=decembre:"));
+const annee1 = Number(window.prompt("Veuillez saisir une année en chiffre :"));
+
+	var nbreJour = 0;
+	
+	if (mois1 <= 6)
+	{
+		      if (mois%2 == 0)
+		    {
+			nbreJour = 31;
+		}
+		else
+		{
+			nbreJour = 30;
+		}
+	}
+	
+	else
+	{
+		if (mois1%2 == 1)
+		{
+			nbreJour = 30;
+		}
+		else
+		{
+			nbreJour = 31;
+		}
+	}
+	if (mois1 == 1)
+	{
+		if(annee1%4==0)
+{
+ 	if(annee1%100==0)
+  	{
+    	if(annee1%400==0)
+     	{
+     		nbreJour = 29;
+     	}
+     	else
+     	{
+      		nbreJour = 28;
+     	}
+
+  	}
+    else
+    {
+   		nbreJour = 29;
+  	}
+}
+else
+{
+ 	nbreJour = 28;
+}
+
+	}
+	
+console.log(nbreJour)
+  
+
+nbrJrs = new Date(annee, mois , 0).getDate();
+console.log(nbrJrs);
