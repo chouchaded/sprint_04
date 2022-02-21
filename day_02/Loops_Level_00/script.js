@@ -89,8 +89,8 @@ else {
 let som = "";
 for (let p = 0; p <= 100; p ++)
 {
-      som =p+ p;
+      som =50*(1+ p);
      
 }
  
-console.log(som);
+console.log("La somme de tous les nombres de 0 à 100 est :",som);
