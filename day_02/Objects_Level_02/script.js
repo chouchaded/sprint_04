@@ -50,21 +50,14 @@ const users = {
   }
 }
 
-// console.log(users);
-// console.log(Object.getOwnPropertyNames(users));
+//<<<<<-----1------>>>>
 let currentMax = -1;
 let userMax = null;
 for (let key in users) {
-    console.log("key",key);
    let plusSkills = users[key].skills.length;
-    console.log("plusSkills", plusSkills);
-    console.log("currentMax",currentMax);
     if (plusSkills > currentMax) {
-            
         currentMax = plusSkills;
-       console.log("curentMAx", currentMax);
         userMax = key;
-        console.log("userMax", userMax);
     }
 console.log("");
 }
@@ -74,15 +67,58 @@ console.log(userMax);
 console.log("");
 console.log("");
 
-let tabTrueLog = [];
-for (let key1 in users) {
-    console.log(users[key1].isLoggedIn);
-    let trueLog = users[key1].isLoggedIn;
-    
-    tabTrueLog.push(trueLog);
 
-    console.log(tabTrueLog);
-    let z = Array.tabTrueLog.filter(true);
-    console.log("Nbr de Connecte", z);
-    
+//<<<<<-----2------>>>>
+let nbr = 0;
+for (var property in users) {
+  let xtrue = users[property].isLoggedIn;
+  // console.log(xtrue);
+  if (xtrue === true) {
+    nbr ++;
+  }
 }
+console.log("nombre de connecter",nbr)
+
+let nbr1 = 0;
+for (var property1 in users) {
+  let xPoints = users[property1].points;
+  // console.log(xtrue);
+  if (xPoints >= 50) {
+    nbr1 ++;
+  }
+}
+console.log("Nbre de personne à 50pts", nbr1);
+
+console.log("");
+ console.log("");
+
+ //<<<<<-----3------>>>>
+let nomDev = "";
+let nbr2 = "";
+for (var property1 in users) {
+  let xMern = users[property1].skills;
+   console.log(xMern);
+  if (xMern.includes("MongoDB") == true && xMern.includes("Express")==true && xMern.includes("React")==true && xMern.includes("Node")==true) {
+    
+    nomDev += property1+" ";
+    nbr2++;
+    // console.log(property1);
+  }
+
+}
+console.log(nomDev,nbr2)
+//
+console.log("");
+ console.log("");
+
+ //<<<<<-----4------>>>>
+console.log(users);
+users.Yannick = {};
+console.log(users);
+console.log("");
+ //<<<<<-----5------>>>>
+console.log(Object.keys(users));
+
+console.log("");
+ //<<<<<-----6------>>>>
+console.log(Object.values(users));
