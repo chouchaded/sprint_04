@@ -1,0 +1,10 @@
+{
+    "prettier.useTabs": true,
+    "prettier.requireConfig": true,
+    "prettier.resolveGlobalModules": true,
+    "prettier.enableDebugLogs": true,
+    "prettier.configPath": "\"prettier.configPath\": \"\"",
+    "prettier.documentSelectors": [
+        "\"prettier.documentSelectors\": []"
+    ]
+}
