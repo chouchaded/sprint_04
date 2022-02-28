@@ -134,3 +134,10 @@ let lettreLand = (element) => element.includes("n");
 
 console.log(countries.every(lettreLand));
 
+
+function disemvowel(str) {
+  console.log(str.replace("e"));
+  return str;
+}
+
+
